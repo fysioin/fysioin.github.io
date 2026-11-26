@@ -142,6 +142,24 @@ p{margin:0 0 1em}
 .panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .panel h3{color:var(--navy)}
 
+/* timeline */
+.timeline{list-style:none;padding:0;margin:0 0 8px;position:relative}
+.timeline li{
+  position:relative;padding:0 0 22px 28px;
+  border-left:2px solid var(--line)
+}
+.timeline li:last-child{border-left-color:transparent;padding-bottom:0}
+.timeline li::before{
+  content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:#fff;box-shadow:inset 0 0 0 3px var(--purple)
+}
+.t-when{
+  font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--purple);margin-bottom:.25em
+}
+.timeline h3{margin-bottom:.3em;color:var(--navy)}
+.timeline p{font-size:.95rem;color:#3c4457;margin:0}
+
 /* faq */
 details{border-bottom:1px solid var(--line);padding:16px 0}
 summary{
@@ -207,7 +225,7 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
   "url": "https://fysio.in/",
   "image": "https://fysio.in/images/share.png",
   "telephone": "+916363550722",
-  "email": "drchristyjpt@gmail.com",
+  "email": "dr.christyjpt@gmail.com",
   "medicalSpecialty": "Physiotherapy",
   "areaServed": [
     { "@type": "City", "name": "Bengaluru" },
@@ -225,8 +243,13 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
   ],
   "employee": {
     "@type": "Person",
-    "name": "Dr. Christy Jose PT",
-    "jobTitle": "Physical Therapist"
+    "name": "Christy Jose",
+    "jobTitle": "Physiotherapist",
+    "knowsLanguage": ["English", "Hindi", "Malayalam", "Tamil", "Kannada", "Telugu"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "St. John's National Academy of Health Sciences, Bengaluru"
+    }
   }
 }
 </script>
@@ -244,6 +267,7 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
       <a href="#services">Services</a>
       <a href="#how">How it works</a>
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#areas">Areas</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -257,8 +281,8 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
     <div class="wrap hero-in">
       <div class="hero-copy">
         <p class="eyebrow">Home visits in Bengaluru &middot; Online consults across India</p>
-        <h1>Physiotherapy at home, one-on-one with a certified physiotherapist.</h1>
-        <p class="lede">Assessment and treatment at your home in Bengaluru, or over video call anywhere in India. Pain management, sports and injury rehab, stroke and neuro-care, and geriatric rehabilitation.</p>
+        <h1>Physiotherapy at home, one-on-one with a BPT-qualified physiotherapist.</h1>
+        <p class="lede">Assessment and treatment at your home in Bengaluru, or over video call anywhere in India. BPT-qualified, with clinical experience in neuro, orthopaedic and cardiorespiratory rehabilitation.</p>
         <div class="cta-row">
           <a class="btn" href="https://wa.me/916363550722?text=Hi%20Fysio.in%2C%20I%27d%20like%20to%20book%20a%20home%20physiotherapy%20visit%20in%20Bengaluru" target="_blank" rel="noopener">Book on WhatsApp</a>
           <a class="btn btn-ghost" href="tel:+916363550722">Call +91 63635 50722</a>
@@ -316,7 +340,8 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
     <div class="wrap about-in">
       <div>
         <h2>About</h2>
-        <p><strong>Dr. Christy Jose PT</strong> is a physical therapist working with people in pain, recovering from injury or surgery, living with a neurological condition, or working to stay mobile as they get older.</p>
+        <p><strong>Christy Jose</strong> is a physiotherapist in Bengaluru with a Bachelor of Physiotherapy from St. John&rsquo;s National Academy of Health Sciences (2017&ndash;2022). His clinical work covers musculoskeletal, neurological and cardiorespiratory rehabilitation.</p>
+        <p>That experience includes neuro rehabilitation at a national neuro institute, consultant physiotherapy at a senior-living group, and rehabilitation at St. John&rsquo;s Medical College Hospital. He has also trained medical officers, community health officers and ASHA workers on neurological disorders and their acute management.</p>
         <p>Sessions are one-on-one and unhurried. The aim is not a machine or a massage alone, but a plan you understand and can keep doing between visits, so progress holds after the sessions stop.</p>
         <h3 class="mt">Specialities</h3>
         <ul class="chips">
@@ -330,6 +355,16 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
           <li>Pilates</li>
           <li>Longevity consult</li>
         </ul>
+
+        <h3 class="mt">Languages spoken</h3>
+        <ul class="chips">
+          <li>English</li>
+          <li>Hindi</li>
+          <li>Malayalam</li>
+          <li>Tamil</li>
+          <li>Kannada</li>
+          <li>Telugu</li>
+        </ul>
       </div>
       <aside class="quote">
         <p class="q">&ldquo;Be a better version of yourself.&rdquo;</p>
@@ -338,13 +373,37 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
     </div>
   </section>
 
-  <section id="areas" class="section alt">
+  <section id="experience" class="section alt">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <ul class="timeline">
+        <li>
+          <p class="t-when">March 2024 &ndash; present</p>
+          <h3>National neuro institute, Bengaluru</h3>
+          <p>Assessment and management of stroke, epilepsy, dementia and headache; neurological examination and long-term treatment planning. Trained medical officers, community health officers and ASHA workers on neurological disorders and acute management.</p>
+        </li>
+        <li>
+          <p class="t-when">August 2023 &ndash; March 2024</p>
+          <h3>Senior-living group, Bengaluru</h3>
+          <p>Consultant physiotherapist, working with older adults on mobility, strength, balance and fall prevention.</p>
+        </li>
+        <li>
+          <p class="t-when">January 2023 &ndash; July 2023</p>
+          <h3>St. John&rsquo;s Medical College, Bengaluru</h3>
+          <p>Therapeutic exercise for range of motion, strength and balance; manual therapy; patient education on posture, ergonomics and injury prevention; home exercise programmes and progress documentation.</p>
+        </li>
+      </ul>
+      <p class="note">Education: Bachelor of Physiotherapy, St. John&rsquo;s National Academy of Health Sciences, Bengaluru (2017&ndash;2022). Continuing education in manual therapy, dry needling, myofascial release, dementia care and fall prevention.</p>
+    </div>
+  </section>
+
+  <section id="areas" class="section">
     <div class="wrap">
       <h2>Where we work</h2>
       <div class="two">
         <div class="panel">
           <h3>Home visits &mdash; Bengaluru</h3>
-          <p>Visits are scheduled across Bengaluru. Send your locality on WhatsApp and you will be told whether a visit is possible, and when.</p>
+          <p>Visits are scheduled across Bengaluru, based in Maruthi Nagar (560034). Send your locality on WhatsApp and you will be told whether a visit is possible, and when.</p>
         </div>
         <div class="panel">
           <h3>Online consults &mdash; anywhere in India</h3>
@@ -354,7 +413,7 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
     </div>
   </section>
 
-  <section id="faq" class="section">
+  <section id="faq" class="section alt">
     <div class="wrap narrow">
       <h2>Questions</h2>
 
@@ -376,6 +435,11 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
       <details>
         <summary>How do I book, and how long is a session?</summary>
         <p>Message on WhatsApp at +91 63635 50722. Session length and fees are confirmed on WhatsApp before your slot is booked, so there are no surprises.</p>
+      </details>
+
+      <details>
+        <summary>Which languages do you speak?</summary>
+        <p>English, Hindi, Malayalam, Tamil, Kannada and Telugu.</p>
       </details>
 
       <details>
@@ -403,7 +467,7 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
         <a class="btn btn-light" href="https://wa.me/916363550722?text=Hi%20Fysio.in%2C%20I%27d%20like%20to%20book%20a%20home%20physiotherapy%20visit%20in%20Bengaluru" target="_blank" rel="noopener">WhatsApp +91 63635 50722</a>
         <a class="btn btn-outline-light" href="tel:+916363550722">Call instead</a>
       </div>
-      <p class="small">Or email <a href="mailto:drchristyjpt@gmail.com">drchristyjpt@gmail.com</a></p>
+      <p class="small">Or email <a href="mailto:dr.christyjpt@gmail.com">dr.christyjpt@gmail.com</a></p>
     </div>
   </section>
 
@@ -413,7 +477,7 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
     <p class="small">Last updated: 26 November 2026</p>
 
     <h3 class="pv">Who we are</h3>
-    <p>Fysio.in provides physiotherapy at home in Bengaluru and online physiotherapy consults across India. You can reach us on +91 63635 50722 or at drchristyjpt@gmail.com.</p>
+    <p>Fysio.in provides physiotherapy at home in Bengaluru and online physiotherapy consults across India. You can reach us on +91 63635 50722 or at dr.christyjpt@gmail.com.</p>
 
     <h3 class="pv">What we collect</h3>
     <p>When you contact us, you may share your name, phone number, locality, and details about your health and symptoms. You share this voluntarily, in order to receive physiotherapy services.</p>
@@ -432,7 +496,7 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
     <p>Enquiry messages are kept while you are a patient and for a reasonable period afterwards for record-keeping. You can ask us to delete your details at any time, and we will do so unless we are required to keep a clinical record.</p>
 
     <h3 class="pv">Your choices</h3>
-    <p>Write to drchristyjpt@gmail.com to ask what we hold about you, to correct it, or to have it deleted. You can also ask us to stop contacting you.</p>
+    <p>Write to dr.christyjpt@gmail.com to ask what we hold about you, to correct it, or to have it deleted. You can also ask us to stop contacting you.</p>
 
     <h3 class="pv">Not for emergencies</h3>
     <p>This site is not an emergency service. For chest pain, sudden weakness, difficulty breathing, a severe injury or any urgent concern, contact your doctor or hospital immediately, or call 108.</p>
@@ -451,7 +515,7 @@ details p{margin:12px 0 4px;color:#3c4457;font-size:.97rem}
       <p class="foot-brand">Fysio.in</p>
       <p class="small">Physiotherapy at home in Bengaluru. Online consults across India.</p>
       <p class="small">Phone &amp; WhatsApp: <a href="tel:+916363550722">+91 63635 50722</a><br>
-      Email: <a href="mailto:drchristyjpt@gmail.com">drchristyjpt@gmail.com</a></p>
+      Email: <a href="mailto:dr.christyjpt@gmail.com">dr.christyjpt@gmail.com</a></p>
     </div>
     <nav aria-label="Footer">
       <p class="small"><a href="#services">Services</a> &middot; <a href="#how">How it works</a> &middot; <a href="#faq">FAQ</a></p>
